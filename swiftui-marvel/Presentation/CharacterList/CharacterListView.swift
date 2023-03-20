@@ -7,14 +7,29 @@
 
 import SwiftUI
 
-struct CharacterListView: View {
+struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewModelInterface {
+    @StateObject private var viewModel: ViewModel
+
+    init(viewModel: ViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView {
+                VStack {
+                    ForEach(viewModel.characterList) { character in
+                        Text(character.name)
+                    }
+                }
+            }
+            .navigationBarTitle("Characters")
+        }
     }
 }
 
 struct CharacterListView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterListView()
+        CharacterListView(viewModel: CharacterListViewModel())
     }
 }

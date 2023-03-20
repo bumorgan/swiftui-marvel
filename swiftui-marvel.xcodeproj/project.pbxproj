@@ -17,6 +17,8 @@
 		0F8645F729C8D70500CE161D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645F629C8D70500CE161D /* APIError.swift */; };
 		0F8645F929C8D76E00CE161D /* FetchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645F829C8D76E00CE161D /* FetchAPI.swift */; };
 		0F8645FD29C8D81400CE161D /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645FC29C8D81400CE161D /* CharacterListView.swift */; };
+		0F86460129C8DAE100CE161D /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F86460029C8DAE100CE161D /* CharacterListViewModel.swift */; };
+		0F86460329C8DCDB00CE161D /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F86460229C8DCDB00CE161D /* CharacterModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		0F8645F629C8D70500CE161D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		0F8645F829C8D76E00CE161D /* FetchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAPI.swift; sourceTree = "<group>"; };
 		0F8645FC29C8D81400CE161D /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		0F86460029C8DAE100CE161D /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
+		0F86460229C8DCDB00CE161D /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				0F8645FC29C8D81400CE161D /* CharacterListView.swift */,
+				0F86460029C8DAE100CE161D /* CharacterListViewModel.swift */,
+				0F86460229C8DCDB00CE161D /* CharacterModel.swift */,
 			);
 			path = CharacterList;
 			sourceTree = "<group>";
@@ -294,6 +300,8 @@
 				0F8645F729C8D70500CE161D /* APIError.swift in Sources */,
 				0F8645CA29C8C96700CE161D /* swiftui_marvelApp.swift in Sources */,
 				0F8645F529C8D6C200CE161D /* JSONParser.swift in Sources */,
+				0F86460129C8DAE100CE161D /* CharacterListViewModel.swift in Sources */,
+				0F86460329C8DCDB00CE161D /* CharacterModel.swift in Sources */,
 				0F8645F929C8D76E00CE161D /* FetchAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
