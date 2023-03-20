@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0F8645CA29C8C96700CE161D /* swiftui_marvelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645C929C8C96700CE161D /* swiftui_marvelApp.swift */; };
-		0F8645CC29C8C96700CE161D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645CB29C8C96700CE161D /* ContentView.swift */; };
 		0F8645CE29C8C96700CE161D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8645CD29C8C96700CE161D /* Assets.xcassets */; };
 		0F8645D129C8C96700CE161D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8645D029C8C96700CE161D /* Preview Assets.xcassets */; };
 		0F8645DB29C8C96700CE161D /* swiftui_marvelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645DA29C8C96700CE161D /* swiftui_marvelTests.swift */; };
 		0F8645E529C8C96700CE161D /* swiftui_marvelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645E429C8C96700CE161D /* swiftui_marvelUITests.swift */; };
 		0F8645E729C8C96700CE161D /* swiftui_marvelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645E629C8C96700CE161D /* swiftui_marvelUITestsLaunchTests.swift */; };
+		0F8645F529C8D6C200CE161D /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645F429C8D6C200CE161D /* JSONParser.swift */; };
+		0F8645F729C8D70500CE161D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645F629C8D70500CE161D /* APIError.swift */; };
+		0F8645F929C8D76E00CE161D /* FetchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645F829C8D76E00CE161D /* FetchAPI.swift */; };
+		0F8645FD29C8D81400CE161D /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645FC29C8D81400CE161D /* CharacterListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		0F8645C629C8C96700CE161D /* swiftui-marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-marvel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8645C929C8C96700CE161D /* swiftui_marvelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_marvelApp.swift; sourceTree = "<group>"; };
-		0F8645CB29C8C96700CE161D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0F8645CD29C8C96700CE161D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F8645D029C8C96700CE161D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0F8645D629C8C96700CE161D /* swiftui-marvelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-marvelTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,10 @@
 		0F8645E029C8C96700CE161D /* swiftui-marvelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-marvelUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8645E429C8C96700CE161D /* swiftui_marvelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_marvelUITests.swift; sourceTree = "<group>"; };
 		0F8645E629C8C96700CE161D /* swiftui_marvelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_marvelUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0F8645F429C8D6C200CE161D /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		0F8645F629C8D70500CE161D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		0F8645F829C8D76E00CE161D /* FetchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAPI.swift; sourceTree = "<group>"; };
+		0F8645FC29C8D81400CE161D /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,9 @@
 		0F8645C829C8C96700CE161D /* swiftui-marvel */ = {
 			isa = PBXGroup;
 			children = (
+				0F8645FA29C8D7BF00CE161D /* Presentation */,
+				0F8645F329C8D6AB00CE161D /* APIManager */,
 				0F8645C929C8C96700CE161D /* swiftui_marvelApp.swift */,
-				0F8645CB29C8C96700CE161D /* ContentView.swift */,
 				0F8645CD29C8C96700CE161D /* Assets.xcassets */,
 				0F8645CF29C8C96700CE161D /* Preview Content */,
 			);
@@ -125,6 +132,32 @@
 				0F8645E629C8C96700CE161D /* swiftui_marvelUITestsLaunchTests.swift */,
 			);
 			path = "swiftui-marvelUITests";
+			sourceTree = "<group>";
+		};
+		0F8645F329C8D6AB00CE161D /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				0F8645F429C8D6C200CE161D /* JSONParser.swift */,
+				0F8645F629C8D70500CE161D /* APIError.swift */,
+				0F8645F829C8D76E00CE161D /* FetchAPI.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		0F8645FA29C8D7BF00CE161D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0F8645FB29C8D7D700CE161D /* CharacterList */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0F8645FB29C8D7D700CE161D /* CharacterList */ = {
+			isa = PBXGroup;
+			children = (
+				0F8645FC29C8D81400CE161D /* CharacterListView.swift */,
+			);
+			path = CharacterList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F8645CC29C8C96700CE161D /* ContentView.swift in Sources */,
+				0F8645FD29C8D81400CE161D /* CharacterListView.swift in Sources */,
+				0F8645F729C8D70500CE161D /* APIError.swift in Sources */,
 				0F8645CA29C8C96700CE161D /* swiftui_marvelApp.swift in Sources */,
+				0F8645F529C8D6C200CE161D /* JSONParser.swift in Sources */,
+				0F8645F929C8D76E00CE161D /* FetchAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
