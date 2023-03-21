@@ -8,20 +8,27 @@
 import Foundation
 import Combine
 
+enum ViewModelState<T> {
+    case idle
+    case loading
+    case failed(Error)
+    case loaded(T)
+}
+
 protocol CharacterListViewModelInterface: ObservableObject {
-    var characterList: [Character] { get set }
+    var state: ViewModelState<[Character]> { get set }
     init(charactersFetcher: CharactersFetchable)
     func fetchCharacterList()
 }
 
 class CharacterListViewModel {
-    @Published var characterList: [Character]
+    @Published var state: ViewModelState<[Character]>
     private let charactersFetcher: CharactersFetchable
     private var disposables = Set<AnyCancellable>()
 
     required init(charactersFetcher: CharactersFetchable) {
         self.charactersFetcher = charactersFetcher
-        self.characterList = [Character]()
+        self.state = .idle
     }
 }
 
@@ -29,18 +36,19 @@ class CharacterListViewModel {
 
 extension CharacterListViewModel: CharacterListViewModelInterface {
     func fetchCharacterList() {
+        state = .loading
         charactersFetcher
             .fetchCharacterList()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] value in
                 switch value {
-                case .failure:
-                    self?.characterList = []
+                case .failure(let error):
+                    self?.state = .failed(error)
                 case .finished:
                     break
                 }
             } receiveValue: { [weak self] response in
-                self?.characterList = response.data.results
+                self?.state = .loaded(response.data.results)
             }
             .store(in: &disposables)
     }

@@ -16,18 +16,32 @@ struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewMode
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack {
-                    ForEach(viewModel.characterList) { character in
-                        Text(character.name)
-                    }
+            switch viewModel.state {
+            case .idle:
+                Color.clear.onAppear(perform: viewModel.fetchCharacterList)
+            case .loading:
+                createLoading()
+            case .failed:
+                Color.clear
+            case .loaded(let characterList):
+                createCharacterList(with: characterList)
+            }
+        }
+    }
+
+    private func createLoading() -> some View {
+        ProgressView()
+    }
+
+    private func createCharacterList(with characterList: [Character]) -> some View {
+        ScrollView {
+            VStack {
+                ForEach(characterList) { character in
+                    Text(character.name)
                 }
             }
-            .navigationBarTitle("Characters")
         }
-        .onAppear {
-            viewModel.fetchCharacterList()
-        }
+        .navigationBarTitle("Characters")
     }
 }
 

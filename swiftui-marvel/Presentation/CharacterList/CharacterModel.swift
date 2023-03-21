@@ -8,7 +8,7 @@
 import Foundation
 
 struct CharacterListResponse: Decodable {
-//    let attributionText: String
+    let attributionText: String
     let data: ResponseData
 }
 
