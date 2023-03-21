@@ -57,7 +57,7 @@ struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewMode
                 .id(id)
                 .onAppear {
                     viewModel.fetchCharacterList(search: searchText)
-                    // to fix a bug appeared in iOS 16
+                    // to fix a bug appeared on iOS 16
                     id += 1
                 }
             Spacer()
