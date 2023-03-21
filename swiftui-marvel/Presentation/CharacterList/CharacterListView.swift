@@ -42,7 +42,11 @@ struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewMode
     private func createCharacterList(with characterList: [Character], isLastPage: Bool) -> some View {
         List {
             ForEach(characterList) { character in
-                Text(character.name)
+                NavigationLink {
+                CharacterListRouter.makeCharacterDetailView(with: character)
+                } label: {
+                    Text(character.name)
+                }
             }
             if !isLastPage {
                 createNextPageLoader()
