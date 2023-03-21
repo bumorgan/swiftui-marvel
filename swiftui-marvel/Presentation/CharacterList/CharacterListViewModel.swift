@@ -17,18 +17,32 @@ enum ViewModelState<T> {
 
 protocol CharacterListViewModelInterface: ObservableObject {
     var state: ViewModelState<[Character]> { get set }
+    var isLastPage: Bool { get set }
+    var lastItemId: Int { get set }
     init(charactersFetcher: CharactersFetchable)
     func fetchCharacterList()
 }
 
 class CharacterListViewModel {
     @Published var state: ViewModelState<[Character]>
+    @Published var isLastPage: Bool
+    @Published var lastItemId: Int
     private let charactersFetcher: CharactersFetchable
     private var disposables = Set<AnyCancellable>()
+
+    private var offset = 0 {
+        didSet {
+            isLastPage = offset < 0
+        }
+    }
+    private var characterList: [Character]
 
     required init(charactersFetcher: CharactersFetchable) {
         self.charactersFetcher = charactersFetcher
         self.state = .idle
+        self.characterList = [Character]()
+        self.isLastPage = false
+        self.lastItemId = -1
     }
 }
 
@@ -36,9 +50,12 @@ class CharacterListViewModel {
 
 extension CharacterListViewModel: CharacterListViewModelInterface {
     func fetchCharacterList() {
-        state = .loading
+        guard offset >= 0 else { return }
+        if offset == 0 {
+            state = .loading
+        }
         charactersFetcher
-            .fetchCharacterList()
+            .fetchCharacterList(offset: offset)
             .receive(on: DispatchQueue.main)
             .sink { [weak self] value in
                 switch value {
@@ -48,7 +65,14 @@ extension CharacterListViewModel: CharacterListViewModelInterface {
                     break
                 }
             } receiveValue: { [weak self] response in
-                self?.state = .loaded(response.data.results)
+                guard let self = self else { return }
+                self.offset += response.data.limit
+                if self.offset > response.data.total {
+                    self.offset = -1
+                }
+                self.lastItemId = response.data.results.last?.id ?? -1
+                self.characterList.append(contentsOf: response.data.results)
+                self.state = .loaded(self.characterList)
             }
             .store(in: &disposables)
     }

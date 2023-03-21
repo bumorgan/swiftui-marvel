@@ -34,10 +34,14 @@ struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewMode
     }
 
     private func createCharacterList(with characterList: [Character]) -> some View {
-        ScrollView {
-            VStack {
-                ForEach(characterList) { character in
-                    Text(character.name)
+        VStack {
+            List(characterList, id: \.id) { character in
+                Text(character.name)
+                if !viewModel.isLastPage && character.id == viewModel.lastItemId {
+                    ProgressView()
+                        .onAppear {
+                            viewModel.fetchCharacterList()
+                        }
                 }
             }
         }
