@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 enum ViewModelState<T> {
-    case idle
+    case loading
     case loaded(T)
 }
 
@@ -18,11 +18,11 @@ protocol CharacterListViewModelInterface: ObservableObject {
     var isLastPage: Bool { get set }
     var hasFailed: Bool { get set }
     init(charactersFetcher: CharactersFetchable)
-    func fetchCharacterList()
+    func fetchCharacterList(search: String)
 }
 
 class CharacterListViewModel {
-    @Published var state: ViewModelState<[Character]> = .idle
+    @Published var state: ViewModelState<[Character]> = .loading
     @Published var isLastPage = false
     @Published var hasFailed = false
 
@@ -40,6 +40,16 @@ class CharacterListViewModel {
         }
     }
 
+    private var search: String = "" {
+        didSet {
+            if search != oldValue {
+                offset = 0
+                characterList.removeAll()
+                state = .loading
+            }
+        }
+    }
+
     required init(charactersFetcher: CharactersFetchable) {
         self.charactersFetcher = charactersFetcher
     }
@@ -48,11 +58,12 @@ class CharacterListViewModel {
 //MARK: - CharacterListViewModelInterface Extension
 
 extension CharacterListViewModel: CharacterListViewModelInterface {
-    func fetchCharacterList() {
+    func fetchCharacterList(search: String) {
+        self.search = search
         guard offset >= 0 else { return }
         disposables.removeAll()
         charactersFetcher
-            .fetchCharacterList(offset: offset)
+            .fetchCharacterList(offset: offset, search: self.search)
             .receive(on: DispatchQueue.main)
             .sink { [weak self] value in
                 switch value {

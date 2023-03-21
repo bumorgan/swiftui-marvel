@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol CharactersFetchable {
-    func fetchCharacterList(offset: Int) -> AnyPublisher<CharacterListResponse, APIError>
+    func fetchCharacterList(offset: Int, search: String) -> AnyPublisher<CharacterListResponse, APIError>
 }
 
 class CharactersAPI {
@@ -29,7 +29,7 @@ private extension CharactersAPI {
         static let timestamp = "1"
     }
     
-    func urlComponentForCharacterList(offset: Int) -> URLComponents {
+    func urlComponentForCharacterList(offset: Int, search: String) -> URLComponents {
         var components = URLComponents()
         components.scheme = CharactersAPIComponent.scheme
         components.host = CharactersAPIComponent.host
@@ -40,6 +40,9 @@ private extension CharactersAPI {
             URLQueryItem(name: "hash", value: CharactersAPIComponent.hash),
             URLQueryItem(name: "ts", value: CharactersAPIComponent.timestamp)
         ]
+        if !search.isEmpty {
+            components.queryItems?.append(URLQueryItem(name: "nameStartsWith", value: search))
+        }
         
         return components
     }
@@ -47,7 +50,7 @@ private extension CharactersAPI {
 
 
 extension CharactersAPI: CharactersFetchable, Fetchable {
-    func fetchCharacterList(offset: Int) -> AnyPublisher<CharacterListResponse, APIError> {
-        return fetch(with: self.urlComponentForCharacterList(offset: offset), session: self.session)
+    func fetchCharacterList(offset: Int, search: String) -> AnyPublisher<CharacterListResponse, APIError> {
+        return fetch(with: self.urlComponentForCharacterList(offset: offset, search: search), session: self.session)
     }
 }

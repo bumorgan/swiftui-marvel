@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewModelInterface {
     @StateObject private var viewModel: ViewModel
+    @State private var searchText: String = ""
 
     init(viewModel: ViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -16,35 +17,37 @@ struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewMode
     
     var body: some View {
         NavigationView {
-            switch viewModel.state {
-            case .idle:
-                ProgressView().onAppear(perform: viewModel.fetchCharacterList)
-            case .loaded(let characterList):
-                createCharacterList(with: characterList, isLastPage: viewModel.isLastPage)
+            VStack {
+                switch viewModel.state {
+                case .loading:
+                    ProgressView().onAppear { viewModel.fetchCharacterList(search: searchText) }
+                case .loaded(let characterList):
+                    createCharacterList(with: characterList, isLastPage: viewModel.isLastPage)
+                }
+            }
+            .navigationTitle("Characters")
+            .searchable(text: $searchText)
+            .onChange(of: searchText) { newValue in
+                viewModel.fetchCharacterList(search: newValue)
             }
         }
         .alert("Something went wrong", isPresented: $viewModel.hasFailed) {
             Button("Try again") {
-                viewModel.fetchCharacterList()
+                viewModel.fetchCharacterList(search: searchText)
             }
         }
     }
 
     private func createCharacterList(with characterList: [Character], isLastPage: Bool) -> some View {
-        VStack {
-            List {
-                ForEach(characterList) { character in
-                    Text(character.name)
-                }
-                if !isLastPage {
-                    ProgressView()
-                        .onAppear {
-                            viewModel.fetchCharacterList()
-                        }
-                }
+        List {
+            ForEach(characterList) { character in
+                Text(character.name)
+            }
+            if !isLastPage {
+                ProgressView()
+                    .onAppear { viewModel.fetchCharacterList(search: searchText) }
             }
         }
-        .navigationBarTitle("Characters")
     }
 }
 
