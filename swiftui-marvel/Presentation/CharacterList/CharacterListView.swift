@@ -25,11 +25,14 @@ struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewMode
             }
             .navigationBarTitle("Characters")
         }
+        .onAppear {
+            viewModel.fetchCharacterList()
+        }
     }
 }
 
 struct CharacterListView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterListView(viewModel: CharacterListViewModel())
+        CharacterListView(viewModel: CharacterListViewModel(charactersFetcher: CharactersAPI()))
     }
 }

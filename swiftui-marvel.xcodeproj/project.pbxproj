@@ -19,6 +19,7 @@
 		0F8645FD29C8D81400CE161D /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645FC29C8D81400CE161D /* CharacterListView.swift */; };
 		0F86460129C8DAE100CE161D /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F86460029C8DAE100CE161D /* CharacterListViewModel.swift */; };
 		0F86460329C8DCDB00CE161D /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F86460229C8DCDB00CE161D /* CharacterModel.swift */; };
+		0F86460529C9D10100CE161D /* CharactersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F86460429C9D10100CE161D /* CharactersAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		0F8645FC29C8D81400CE161D /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 		0F86460029C8DAE100CE161D /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
 		0F86460229C8DCDB00CE161D /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		0F86460429C9D10100CE161D /* CharactersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersAPI.swift; sourceTree = "<group>"; };
+		0F86460629C9D80100CE161D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		0F8645C829C8C96700CE161D /* swiftui-marvel */ = {
 			isa = PBXGroup;
 			children = (
+				0F86460629C9D80100CE161D /* Info.plist */,
 				0F8645FA29C8D7BF00CE161D /* Presentation */,
 				0F8645F329C8D6AB00CE161D /* APIManager */,
 				0F8645C929C8C96700CE161D /* swiftui_marvelApp.swift */,
@@ -144,6 +148,7 @@
 				0F8645F429C8D6C200CE161D /* JSONParser.swift */,
 				0F8645F629C8D70500CE161D /* APIError.swift */,
 				0F8645F829C8D76E00CE161D /* FetchAPI.swift */,
+				0F86460429C9D10100CE161D /* CharactersAPI.swift */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F86460529C9D10100CE161D /* CharactersAPI.swift in Sources */,
 				0F8645FD29C8D81400CE161D /* CharacterListView.swift in Sources */,
 				0F8645F729C8D70500CE161D /* APIError.swift in Sources */,
 				0F8645CA29C8C96700CE161D /* swiftui_marvelApp.swift in Sources */,
@@ -463,7 +469,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"swiftui-marvel/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "swiftui-marvel/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -491,7 +497,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"swiftui-marvel/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "swiftui-marvel/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
