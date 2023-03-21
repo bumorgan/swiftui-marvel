@@ -10,6 +10,7 @@ import SwiftUI
 struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewModelInterface {
     @StateObject private var viewModel: ViewModel
     @State private var searchText: String = ""
+    @State var id = 0
 
     init(viewModel: ViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -44,9 +45,22 @@ struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewMode
                 Text(character.name)
             }
             if !isLastPage {
-                ProgressView()
-                    .onAppear { viewModel.fetchCharacterList(search: searchText) }
+                createNextPageLoader()
             }
+        }
+    }
+    
+    private func createNextPageLoader() -> some View {
+        HStack {
+            Spacer()
+            ProgressView()
+                .id(id)
+                .onAppear {
+                    viewModel.fetchCharacterList(search: searchText)
+                    // to fix a bug appeared in iOS 16
+                    id += 1
+                }
+            Spacer()
         }
     }
 }
