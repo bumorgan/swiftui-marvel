@@ -23,4 +23,11 @@ struct ResponseData: Decodable {
 struct Character: Decodable, Identifiable {
     let id: Int
     let name: String
+    let description: String
+    let thumbnail: Thumbnail
+}
+
+struct Thumbnail: Decodable {
+    let path: String
+    let `extension`: String
 }

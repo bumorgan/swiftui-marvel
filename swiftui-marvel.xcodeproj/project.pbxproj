@@ -156,6 +156,7 @@
 		0F8645FA29C8D7BF00CE161D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0FE1964129CA42F800EDDC00 /* CharacterDetail */,
 				0F8645FB29C8D7D700CE161D /* CharacterList */,
 			);
 			path = Presentation;
@@ -169,6 +170,13 @@
 				0F86460229C8DCDB00CE161D /* CharacterModel.swift */,
 			);
 			path = CharacterList;
+			sourceTree = "<group>";
+		};
+		0FE1964129CA42F800EDDC00 /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CharacterDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
