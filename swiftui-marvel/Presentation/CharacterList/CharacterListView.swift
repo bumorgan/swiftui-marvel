@@ -18,19 +18,15 @@ struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewMode
         NavigationView {
             switch viewModel.state {
             case .idle:
-                Color.clear.onAppear(perform: viewModel.fetchCharacterList)
+                ProgressView().onAppear(perform: viewModel.fetchCharacterList)
             case .loading:
-                createLoading()
+                ProgressView()
             case .failed:
                 Color.clear
             case .loaded(let characterList):
                 createCharacterList(with: characterList)
             }
         }
-    }
-
-    private func createLoading() -> some View {
-        ProgressView()
     }
 
     private func createCharacterList(with characterList: [Character]) -> some View {

@@ -35,7 +35,12 @@ class CharacterListViewModel {
             isLastPage = offset < 0
         }
     }
-    private var characterList: [Character]
+    private var characterList: [Character] {
+        didSet {
+            lastItemId = characterList.last?.id ?? -1
+            state = .loaded(characterList)
+        }
+    }
 
     required init(charactersFetcher: CharactersFetchable) {
         self.charactersFetcher = charactersFetcher
@@ -70,9 +75,7 @@ extension CharacterListViewModel: CharacterListViewModelInterface {
                 if self.offset > response.data.total {
                     self.offset = -1
                 }
-                self.lastItemId = response.data.results.last?.id ?? -1
                 self.characterList.append(contentsOf: response.data.results)
-                self.state = .loaded(self.characterList)
             }
             .store(in: &disposables)
     }
