@@ -18,7 +18,6 @@ enum ViewModelState<T> {
 protocol CharacterListViewModelInterface: ObservableObject {
     var state: ViewModelState<[Character]> { get set }
     var isLastPage: Bool { get set }
-    var lastItemId: Int { get set }
     init(charactersFetcher: CharactersFetchable)
     func fetchCharacterList()
 }
@@ -26,7 +25,6 @@ protocol CharacterListViewModelInterface: ObservableObject {
 class CharacterListViewModel {
     @Published var state: ViewModelState<[Character]>
     @Published var isLastPage: Bool
-    @Published var lastItemId: Int
     private let charactersFetcher: CharactersFetchable
     private var disposables = Set<AnyCancellable>()
 
@@ -37,7 +35,6 @@ class CharacterListViewModel {
     }
     private var characterList: [Character] {
         didSet {
-            lastItemId = characterList.last?.id ?? -1
             state = .loaded(characterList)
         }
     }
@@ -47,7 +44,6 @@ class CharacterListViewModel {
         self.state = .idle
         self.characterList = [Character]()
         self.isLastPage = false
-        self.lastItemId = -1
     }
 }
 

@@ -24,16 +24,18 @@ struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewMode
             case .failed:
                 Color.clear
             case .loaded(let characterList):
-                createCharacterList(with: characterList)
+                createCharacterList(with: characterList, isLastPage: viewModel.isLastPage)
             }
         }
     }
 
-    private func createCharacterList(with characterList: [Character]) -> some View {
+    private func createCharacterList(with characterList: [Character], isLastPage: Bool) -> some View {
         VStack {
-            List(characterList, id: \.id) { character in
-                Text(character.name)
-                if !viewModel.isLastPage && character.id == viewModel.lastItemId {
+            List {
+                ForEach(characterList) { character in
+                    Text(character.name)
+                }
+                if !isLastPage {
                     ProgressView()
                         .onAppear {
                             viewModel.fetchCharacterList()
