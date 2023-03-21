@@ -19,8 +19,6 @@ struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewMode
             switch viewModel.state {
             case .idle:
                 ProgressView().onAppear(perform: viewModel.fetchCharacterList)
-            case .loading:
-                ProgressView()
             case .loaded(let characterList):
                 createCharacterList(with: characterList, isLastPage: viewModel.isLastPage)
             }

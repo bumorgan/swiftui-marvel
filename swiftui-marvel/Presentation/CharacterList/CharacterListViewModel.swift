@@ -10,7 +10,6 @@ import Combine
 
 enum ViewModelState<T> {
     case idle
-    case loading
     case loaded(T)
 }
 
@@ -51,9 +50,6 @@ class CharacterListViewModel {
 extension CharacterListViewModel: CharacterListViewModelInterface {
     func fetchCharacterList() {
         guard offset >= 0 else { return }
-        if offset == 0 {
-            state = .loading
-        }
         disposables.removeAll()
         charactersFetcher
             .fetchCharacterList(offset: offset)
