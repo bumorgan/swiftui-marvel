@@ -34,7 +34,7 @@ extension CharacterListViewModel: CharacterListViewModelInterface {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] value in
                 switch value {
-                case .failure(let error):
+                case .failure:
                     self?.characterList = []
                 case .finished:
                     break

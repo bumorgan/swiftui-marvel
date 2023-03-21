@@ -15,7 +15,7 @@ func decode<T: Decodable>(_ data: Data) -> AnyPublisher<T, APIError> {
     return Just(data)
         .decode(type: T.self, decoder: decoder)
         .mapError { error in
-                .parsing(message: error.localizedDescription)
+            .parsing(message: error.localizedDescription)
         }
         .eraseToAnyPublisher()
 }

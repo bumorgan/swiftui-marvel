@@ -26,6 +26,8 @@ private extension CharactersAPI {
         static let host = "gateway.marvel.com"
         static let path = "/v1/public/characters"
         static let apiKey = "8646d8b6ff6d3e387697ef2c7c94ef29"
+        static let hash = "342c2dd19c8912a93ce27b1af71f765e"
+        static let timestamp = "1"
     }
     
     func urlComponentForCharacterList() -> URLComponents {
@@ -34,7 +36,9 @@ private extension CharactersAPI {
         components.host = CharactersAPIComponent.host
         components.path = CharactersAPIComponent.path
         components.queryItems = [
-          URLQueryItem(name: "apikey", value: CharactersAPIComponent.apiKey ),
+          URLQueryItem(name: "apikey", value: CharactersAPIComponent.apiKey),
+          URLQueryItem(name: "hash", value: CharactersAPIComponent.hash),
+          URLQueryItem(name: "ts", value: CharactersAPIComponent.timestamp)
         ]
         
         return components
