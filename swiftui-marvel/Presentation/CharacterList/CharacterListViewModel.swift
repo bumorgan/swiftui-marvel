@@ -11,20 +11,22 @@ import Combine
 enum ViewModelState<T> {
     case idle
     case loading
-    case failed(Error)
     case loaded(T)
 }
 
 protocol CharacterListViewModelInterface: ObservableObject {
     var state: ViewModelState<[Character]> { get set }
     var isLastPage: Bool { get set }
+    var hasFailed: Bool { get set }
     init(charactersFetcher: CharactersFetchable)
     func fetchCharacterList()
 }
 
 class CharacterListViewModel {
-    @Published var state: ViewModelState<[Character]>
-    @Published var isLastPage: Bool
+    @Published var state: ViewModelState<[Character]> = .idle
+    @Published var isLastPage = false
+    @Published var hasFailed = false
+
     private let charactersFetcher: CharactersFetchable
     private var disposables = Set<AnyCancellable>()
 
@@ -33,7 +35,7 @@ class CharacterListViewModel {
             isLastPage = offset < 0
         }
     }
-    private var characterList: [Character] {
+    private var characterList = [Character]() {
         didSet {
             state = .loaded(characterList)
         }
@@ -41,9 +43,6 @@ class CharacterListViewModel {
 
     required init(charactersFetcher: CharactersFetchable) {
         self.charactersFetcher = charactersFetcher
-        self.state = .idle
-        self.characterList = [Character]()
-        self.isLastPage = false
     }
 }
 
@@ -55,13 +54,14 @@ extension CharacterListViewModel: CharacterListViewModelInterface {
         if offset == 0 {
             state = .loading
         }
+        disposables.removeAll()
         charactersFetcher
             .fetchCharacterList(offset: offset)
             .receive(on: DispatchQueue.main)
             .sink { [weak self] value in
                 switch value {
-                case .failure(let error):
-                    self?.state = .failed(error)
+                case .failure:
+                    self?.hasFailed = true
                 case .finished:
                     break
                 }

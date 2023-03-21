@@ -21,10 +21,13 @@ struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewMode
                 ProgressView().onAppear(perform: viewModel.fetchCharacterList)
             case .loading:
                 ProgressView()
-            case .failed:
-                Color.clear
             case .loaded(let characterList):
                 createCharacterList(with: characterList, isLastPage: viewModel.isLastPage)
+            }
+        }
+        .alert("Something went wrong", isPresented: $viewModel.hasFailed) {
+            Button("Try again") {
+                viewModel.fetchCharacterList()
             }
         }
     }
