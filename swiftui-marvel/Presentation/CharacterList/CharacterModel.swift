@@ -24,10 +24,22 @@ struct Character: Decodable, Identifiable {
     let id: Int
     let name: String
     let description: String
-    let thumbnail: Thumbnail
+    let thumbnail: Thumbnail?
+    let stories: CharacterStories?
 }
 
 struct Thumbnail: Decodable {
-    let path: String
-    let `extension`: String
+    let path: String?
+    let `extension`: String?
+}
+
+struct CharacterStories: Decodable {
+    let available: Int
+    let collectionURI: String
+    let items: [Story]
+}
+
+struct Story: Decodable {
+    let name: String
+    let resourceURI: String
 }
