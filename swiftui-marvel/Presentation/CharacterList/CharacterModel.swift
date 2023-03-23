@@ -25,7 +25,10 @@ struct Character: Decodable, Identifiable {
     let name: String
     let description: String
     let thumbnail: Thumbnail?
-    let stories: CharacterStories?
+    let stories: CharacterItem?
+    let comics: CharacterItem?
+    let events: CharacterItem?
+    let series: CharacterItem?
 }
 
 struct Thumbnail: Decodable {
@@ -33,13 +36,7 @@ struct Thumbnail: Decodable {
     let `extension`: String?
 }
 
-struct CharacterStories: Decodable {
+struct CharacterItem: Decodable {
     let available: Int
     let collectionURI: String
-    let items: [Story]
-}
-
-struct Story: Decodable {
-    let name: String
-    let resourceURI: String
 }

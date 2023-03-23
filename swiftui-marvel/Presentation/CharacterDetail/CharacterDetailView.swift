@@ -16,26 +16,37 @@ struct CharacterDetailView<ViewModel>: View where ViewModel: CharacterDetailView
     
     var body: some View {
         List {
-            AsyncImage(
-                url: URL(string: "\(viewModel.character.thumbnail?.path ?? "").\(viewModel.character.thumbnail?.extension ?? "")"),
-                content: { image in
+            AsyncImage(url: URL(string: "\(viewModel.character.thumbnail?.path ?? "").\(viewModel.character.thumbnail?.extension ?? "")")) { phase in
+                if let image = phase.image {
                     image.resizable()
                         .aspectRatio(contentMode: .fit)
-                },
-                placeholder: {
-                    ProgressView()
+                } else if phase.error != nil {
+                    Text("Fails to load image")
+                } else {
+                    HStack {
+                        Spacer()
+                        ProgressView()
+                        Spacer()
+                    }
                 }
-            )
+            }.listRowInsets(EdgeInsets())
             if !viewModel.character.description.isEmpty {
                 Section(header: Text(viewModel.character.name)) {
                     Text(viewModel.character.description)
                 }
             }
-            if let items = viewModel.character.stories?.items {
-                Section(header: Text("Stories")) {
-                    ForEach(items, id: \.resourceURI) { item in
-                        Text(item.name)
-                    }
+            Section(header: Text("Links")) {
+                if let _ = viewModel.character.stories {
+                    Text("Stories")
+                }
+                if let _ = viewModel.character.comics {
+                    Text("Comics")
+                }
+                if let _ = viewModel.character.events {
+                    Text("Events")
+                }
+                if let _ = viewModel.character.series {
+                    Text("Series")
                 }
             }
         }
@@ -54,7 +65,10 @@ struct CharacterDetailView_Previews: PreviewProvider {
                                     path: "http://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0",
                                     extension: "jpg"
                                  ),
-                                 stories: nil
+                                 stories: nil,
+                                 comics: nil,
+                                 events: nil,
+                                 series: nil
                         )
             )
         )
