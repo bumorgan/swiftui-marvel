@@ -35,18 +35,20 @@ struct CharacterDetailView<ViewModel>: View where ViewModel: CharacterDetailView
                     Text(viewModel.character.description)
                 }
             }
-            Section(header: Text("Links")) {
-                if let _ = viewModel.character.stories {
-                    Text("Stories")
-                }
-                if let _ = viewModel.character.comics {
-                    Text("Comics")
-                }
-                if let _ = viewModel.character.events {
-                    Text("Events")
-                }
-                if let _ = viewModel.character.series {
-                    Text("Series")
+            if viewModel.hasLinks {
+                Section(header: Text("Links")) {
+                    if let _ = viewModel.character.stories {
+                        Text("Stories")
+                    }
+                    if let _ = viewModel.character.comics {
+                        Text("Comics")
+                    }
+                    if let _ = viewModel.character.events {
+                        Text("Events")
+                    }
+                    if let _ = viewModel.character.series {
+                        Text("Series")
+                    }
                 }
             }
         }
