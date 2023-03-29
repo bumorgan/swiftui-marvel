@@ -43,7 +43,7 @@ struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewMode
         List {
             ForEach(characterList) { character in
                 NavigationLink {
-                CharacterListRouter.makeCharacterDetailView(with: character)
+                    CharacterListRouter.makeCharacterDetailView(with: character)
                 } label: {
                     Text(character.name)
                 }
