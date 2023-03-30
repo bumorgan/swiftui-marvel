@@ -34,6 +34,7 @@ struct CharacterListView<ViewModel>: View where ViewModel: CharacterListViewMode
         }
         .alert("Something went wrong", isPresented: $viewModel.hasFailed) {
             Button("Try again") {
+                viewModel.hasFailed = false
                 viewModel.fetchCharacterList(search: searchText)
             }
         }
