@@ -21,6 +21,7 @@
 		0F86460529C9D10100CE161D /* CharactersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F86460429C9D10100CE161D /* CharactersAPI.swift */; };
 		0FBAED8F29D5159200040E65 /* CharacterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBAED8E29D5159200040E65 /* CharacterListViewModelTests.swift */; };
 		0FBAED9329D5167D00040E65 /* CharacterAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBAED9229D5167D00040E65 /* CharacterAPIMock.swift */; };
+		0FBAEF8429D5247000040E65 /* CharacterModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBAEF8329D5247000040E65 /* CharacterModelMock.swift */; };
 		0FE1964329CA432600EDDC00 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE1964229CA432600EDDC00 /* CharacterDetailView.swift */; };
 		0FE1964529CA434500EDDC00 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE1964429CA434500EDDC00 /* CharacterDetailViewModel.swift */; };
 		0FE1964729CA44A800EDDC00 /* CharacterListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE1964629CA44A800EDDC00 /* CharacterListRouter.swift */; };
@@ -62,6 +63,7 @@
 		0F86460629C9D80100CE161D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0FBAED8E29D5159200040E65 /* CharacterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelTests.swift; sourceTree = "<group>"; };
 		0FBAED9229D5167D00040E65 /* CharacterAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterAPIMock.swift; sourceTree = "<group>"; };
+		0FBAEF8329D5247000040E65 /* CharacterModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModelMock.swift; sourceTree = "<group>"; };
 		0FE1964229CA432600EDDC00 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		0FE1964429CA434500EDDC00 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		0FE1964629CA44A800EDDC00 /* CharacterListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListRouter.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		0F8645D929C8C96700CE161D /* swiftui-marvelTests */ = {
 			isa = PBXGroup;
 			children = (
+				0FBAED9029D5162400040E65 /* Mocks */,
 				0FBAED8C29D5156B00040E65 /* Presentation */,
 			);
 			path = "swiftui-marvelTests";
@@ -184,7 +187,6 @@
 		0FBAED8C29D5156B00040E65 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				0FBAED9029D5162400040E65 /* Mocks */,
 				0FBAED8D29D5157B00040E65 /* CharacterList */,
 			);
 			path = Presentation;
@@ -201,6 +203,7 @@
 		0FBAED9029D5162400040E65 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				0FBAEF8229D5245700040E65 /* Models */,
 				0FBAED9129D5162D00040E65 /* APIManager */,
 			);
 			path = Mocks;
@@ -212,6 +215,14 @@
 				0FBAED9229D5167D00040E65 /* CharacterAPIMock.swift */,
 			);
 			path = APIManager;
+			sourceTree = "<group>";
+		};
+		0FBAEF8229D5245700040E65 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0FBAEF8329D5247000040E65 /* CharacterModelMock.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		0FE1964129CA42F800EDDC00 /* CharacterDetail */ = {
@@ -371,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FBAEF8429D5247000040E65 /* CharacterModelMock.swift in Sources */,
 				0FBAED9329D5167D00040E65 /* CharacterAPIMock.swift in Sources */,
 				0FBAED8F29D5159200040E65 /* CharacterListViewModelTests.swift in Sources */,
 			);
