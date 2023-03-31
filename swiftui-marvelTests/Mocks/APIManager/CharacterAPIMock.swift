@@ -9,9 +9,9 @@ import Combine
 @testable import swiftui_marvel
 
 class CharacterAPIMock: CharactersFetchable {
-    var expected: AnyPublisher<CharacterListResponse, APIError>!
+    var expectedResult: Result<CharacterListResponse, APIError>!
     
     func fetchCharacterList(offset: Int, search: String) -> AnyPublisher<CharacterListResponse, APIError> {
-        expected
+        expectedResult.publisher.eraseToAnyPublisher()
     }
 }

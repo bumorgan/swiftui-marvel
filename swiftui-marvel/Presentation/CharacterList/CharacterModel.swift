@@ -20,7 +20,7 @@ struct ResponseData: Decodable {
     let results: [Character]
 }
 
-struct Character: Decodable, Identifiable {
+struct Character: Decodable, Equatable, Identifiable {
     let id: Int
     let name: String
     let description: String
@@ -31,12 +31,12 @@ struct Character: Decodable, Identifiable {
     let series: CharacterItem?
 }
 
-struct Thumbnail: Decodable {
+struct Thumbnail: Decodable, Equatable {
     let path: String?
     let `extension`: String?
 }
 
-struct CharacterItem: Decodable {
+struct CharacterItem: Decodable, Equatable {
     let available: Int
     let collectionURI: String
 }

@@ -27,7 +27,7 @@ class CharacterListViewModelTests: XCTestCase {
 
     func testfetchCharacterList_WhenFails_ShouldHasFailed() throws {
         // given
-        service.expected = Result.failure(APIError.request(message: "Fail")).publisher.eraseToAnyPublisher()
+        service.expectedResult = .failure(APIError.request(message: "Fail"))
         let expectation = XCTestExpectation(description: "Failed is set")
         sut.$hasFailed.dropFirst().sink { hasFailed in
             XCTAssert(hasFailed)
@@ -43,11 +43,13 @@ class CharacterListViewModelTests: XCTestCase {
 
     func testFetchCharacterList_WhenSucceed_ShouldLoadedState() {
         // given
-        service.expected = Result.success(.mock).publisher.eraseToAnyPublisher()
+        let expectedData = CharacterListResponse.mock
+        service.expectedResult = .success(expectedData)
         let expectation = XCTestExpectation(description: "State is loaded")
         sut.$state.dropFirst().sink { state in
             switch state {
-            case .loaded:
+            case .loaded(let response):
+                XCTAssertEqual(response, expectedData.data.results)
                 expectation.fulfill()
             default:
                 XCTFail()
