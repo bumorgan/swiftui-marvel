@@ -74,11 +74,12 @@ extension CharacterListViewModel: CharacterListViewModelInterface {
                 }
             } receiveValue: { [weak self] response in
                 guard let self = self else { return }
-                self.offset += response.data.limit
-                if self.offset > response.data.total {
+                let data = response.data
+                self.offset += data.limit
+                if self.offset > data.total {
                     self.offset = -1
                 }
-                self.characterList.append(contentsOf: response.data.results)
+                self.characterList.append(contentsOf: data.results)
             }
             .store(in: &disposables)
     }

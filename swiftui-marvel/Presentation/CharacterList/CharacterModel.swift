@@ -25,18 +25,9 @@ struct Character: Decodable, Equatable, Identifiable {
     let name: String
     let description: String
     let thumbnail: Thumbnail?
-    let stories: CharacterItem?
-    let comics: CharacterItem?
-    let events: CharacterItem?
-    let series: CharacterItem?
 }
 
 struct Thumbnail: Decodable, Equatable {
     let path: String?
     let `extension`: String?
-}
-
-struct CharacterItem: Decodable, Equatable {
-    let available: Int
-    let collectionURI: String
 }

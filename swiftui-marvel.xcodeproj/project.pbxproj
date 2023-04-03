@@ -10,8 +10,6 @@
 		0F8645CA29C8C96700CE161D /* swiftui_marvelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645C929C8C96700CE161D /* swiftui_marvelApp.swift */; };
 		0F8645CE29C8C96700CE161D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8645CD29C8C96700CE161D /* Assets.xcassets */; };
 		0F8645D129C8C96700CE161D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8645D029C8C96700CE161D /* Preview Assets.xcassets */; };
-		0F8645E529C8C96700CE161D /* swiftui_marvelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645E429C8C96700CE161D /* swiftui_marvelUITests.swift */; };
-		0F8645E729C8C96700CE161D /* swiftui_marvelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645E629C8C96700CE161D /* swiftui_marvelUITestsLaunchTests.swift */; };
 		0F8645F529C8D6C200CE161D /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645F429C8D6C200CE161D /* JSONParser.swift */; };
 		0F8645F729C8D70500CE161D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645F629C8D70500CE161D /* APIError.swift */; };
 		0F8645F929C8D76E00CE161D /* FetchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645F829C8D76E00CE161D /* FetchAPI.swift */; };
@@ -51,8 +49,6 @@
 		0F8645D029C8C96700CE161D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0F8645D629C8C96700CE161D /* swiftui-marvelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-marvelTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8645E029C8C96700CE161D /* swiftui-marvelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-marvelUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F8645E429C8C96700CE161D /* swiftui_marvelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_marvelUITests.swift; sourceTree = "<group>"; };
-		0F8645E629C8C96700CE161D /* swiftui_marvelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_marvelUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0F8645F429C8D6C200CE161D /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		0F8645F629C8D70500CE161D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		0F8645F829C8D76E00CE161D /* FetchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAPI.swift; sourceTree = "<group>"; };
@@ -99,7 +95,6 @@
 			children = (
 				0F8645C829C8C96700CE161D /* swiftui-marvel */,
 				0F8645D929C8C96700CE161D /* swiftui-marvelTests */,
-				0F8645E329C8C96700CE161D /* swiftui-marvelUITests */,
 				0F8645C729C8C96700CE161D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -142,15 +137,6 @@
 				0FBAED8C29D5156B00040E65 /* Presentation */,
 			);
 			path = "swiftui-marvelTests";
-			sourceTree = "<group>";
-		};
-		0F8645E329C8C96700CE161D /* swiftui-marvelUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0F8645E429C8C96700CE161D /* swiftui_marvelUITests.swift */,
-				0F8645E629C8C96700CE161D /* swiftui_marvelUITestsLaunchTests.swift */,
-			);
-			path = "swiftui-marvelUITests";
 			sourceTree = "<group>";
 		};
 		0F8645F329C8D6AB00CE161D /* APIManager */ = {
@@ -392,8 +378,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F8645E529C8C96700CE161D /* swiftui_marvelUITests.swift in Sources */,
-				0F8645E729C8C96700CE161D /* swiftui_marvelUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

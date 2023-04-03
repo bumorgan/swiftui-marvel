@@ -35,22 +35,6 @@ struct CharacterDetailView<ViewModel>: View where ViewModel: CharacterDetailView
                     Text(viewModel.character.description)
                 }
             }
-            if viewModel.hasLinks {
-                Section(header: Text("Links")) {
-                    if let _ = viewModel.character.stories {
-                        Text("Stories")
-                    }
-                    if let _ = viewModel.character.comics {
-                        Text("Comics")
-                    }
-                    if let _ = viewModel.character.events {
-                        Text("Events")
-                    }
-                    if let _ = viewModel.character.series {
-                        Text("Series")
-                    }
-                }
-            }
         }
         .navigationBarTitle(viewModel.character.name)
     }
@@ -66,11 +50,7 @@ struct CharacterDetailView_Previews: PreviewProvider {
                                  thumbnail: Thumbnail(
                                     path: "http://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0",
                                     extension: "jpg"
-                                 ),
-                                 stories: nil,
-                                 comics: nil,
-                                 events: nil,
-                                 series: nil
+                                 )
                         )
             )
         )
