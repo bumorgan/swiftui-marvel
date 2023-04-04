@@ -21,9 +21,10 @@
 		0FBAED9329D5167D00040E65 /* CharacterAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBAED9229D5167D00040E65 /* CharacterAPIMock.swift */; };
 		0FBAEF8429D5247000040E65 /* CharacterModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBAEF8329D5247000040E65 /* CharacterModelMock.swift */; };
 		0FC98E1329DCB7AC005E53EF /* watch_swiftui_marvelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC98E1229DCB7AC005E53EF /* watch_swiftui_marvelApp.swift */; };
-		0FC98E1529DCB7AC005E53EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC98E1429DCB7AC005E53EF /* ContentView.swift */; };
+		0FC98E1529DCB7AC005E53EF /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC98E1429DCB7AC005E53EF /* CharacterDetailView.swift */; };
 		0FC98E1729DCB7AD005E53EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC98E1629DCB7AD005E53EF /* Assets.xcassets */; };
 		0FC98E1A29DCB7AD005E53EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC98E1929DCB7AD005E53EF /* Preview Assets.xcassets */; };
+		0FC98E1F29DCB9EA005E53EF /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F86460229C8DCDB00CE161D /* CharacterModel.swift */; };
 		0FE1964329CA432600EDDC00 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE1964229CA432600EDDC00 /* CharacterDetailView.swift */; };
 		0FE1964529CA434500EDDC00 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE1964429CA434500EDDC00 /* CharacterDetailViewModel.swift */; };
 		0FE1964729CA44A800EDDC00 /* CharacterListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE1964629CA44A800EDDC00 /* CharacterListRouter.swift */; };
@@ -66,7 +67,7 @@
 		0FBAEF8329D5247000040E65 /* CharacterModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModelMock.swift; sourceTree = "<group>"; };
 		0FC98E1029DCB7AC005E53EF /* watch-swiftui-marvel Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "watch-swiftui-marvel Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC98E1229DCB7AC005E53EF /* watch_swiftui_marvelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watch_swiftui_marvelApp.swift; sourceTree = "<group>"; };
-		0FC98E1429DCB7AC005E53EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0FC98E1429DCB7AC005E53EF /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		0FC98E1629DCB7AD005E53EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FC98E1929DCB7AD005E53EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0FC98E1E29DCB8F5005E53EF /* watch-swiftui-marvel-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "watch-swiftui-marvel-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -235,7 +236,7 @@
 			children = (
 				0FC98E1E29DCB8F5005E53EF /* watch-swiftui-marvel-Watch-App-Info.plist */,
 				0FC98E1229DCB7AC005E53EF /* watch_swiftui_marvelApp.swift */,
-				0FC98E1429DCB7AC005E53EF /* ContentView.swift */,
+				0FC98E1429DCB7AC005E53EF /* CharacterDetailView.swift */,
 				0FC98E1629DCB7AD005E53EF /* Assets.xcassets */,
 				0FC98E1829DCB7AD005E53EF /* Preview Content */,
 			);
@@ -454,7 +455,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FC98E1529DCB7AC005E53EF /* ContentView.swift in Sources */,
+				0FC98E1F29DCB9EA005E53EF /* CharacterModel.swift in Sources */,
+				0FC98E1529DCB7AC005E53EF /* CharacterDetailView.swift in Sources */,
 				0FC98E1329DCB7AC005E53EF /* watch_swiftui_marvelApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

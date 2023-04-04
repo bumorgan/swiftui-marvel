@@ -11,7 +11,7 @@ import SwiftUI
 struct watch_swiftui_marvel_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CharacterDetailView()
         }
     }
 }
