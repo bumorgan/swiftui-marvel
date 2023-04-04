@@ -20,6 +20,10 @@
 		0FBAED8F29D5159200040E65 /* CharacterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBAED8E29D5159200040E65 /* CharacterListViewModelTests.swift */; };
 		0FBAED9329D5167D00040E65 /* CharacterAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBAED9229D5167D00040E65 /* CharacterAPIMock.swift */; };
 		0FBAEF8429D5247000040E65 /* CharacterModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBAEF8329D5247000040E65 /* CharacterModelMock.swift */; };
+		0FC98E1329DCB7AC005E53EF /* watch_swiftui_marvelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC98E1229DCB7AC005E53EF /* watch_swiftui_marvelApp.swift */; };
+		0FC98E1529DCB7AC005E53EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC98E1429DCB7AC005E53EF /* ContentView.swift */; };
+		0FC98E1729DCB7AD005E53EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC98E1629DCB7AD005E53EF /* Assets.xcassets */; };
+		0FC98E1A29DCB7AD005E53EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC98E1929DCB7AD005E53EF /* Preview Assets.xcassets */; };
 		0FE1964329CA432600EDDC00 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE1964229CA432600EDDC00 /* CharacterDetailView.swift */; };
 		0FE1964529CA434500EDDC00 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE1964429CA434500EDDC00 /* CharacterDetailViewModel.swift */; };
 		0FE1964729CA44A800EDDC00 /* CharacterListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE1964629CA44A800EDDC00 /* CharacterListRouter.swift */; };
@@ -60,6 +64,12 @@
 		0FBAED8E29D5159200040E65 /* CharacterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelTests.swift; sourceTree = "<group>"; };
 		0FBAED9229D5167D00040E65 /* CharacterAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterAPIMock.swift; sourceTree = "<group>"; };
 		0FBAEF8329D5247000040E65 /* CharacterModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModelMock.swift; sourceTree = "<group>"; };
+		0FC98E1029DCB7AC005E53EF /* watch-swiftui-marvel Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "watch-swiftui-marvel Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FC98E1229DCB7AC005E53EF /* watch_swiftui_marvelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watch_swiftui_marvelApp.swift; sourceTree = "<group>"; };
+		0FC98E1429DCB7AC005E53EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0FC98E1629DCB7AD005E53EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0FC98E1929DCB7AD005E53EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0FC98E1E29DCB8F5005E53EF /* watch-swiftui-marvel-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "watch-swiftui-marvel-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0FE1964229CA432600EDDC00 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		0FE1964429CA434500EDDC00 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		0FE1964629CA44A800EDDC00 /* CharacterListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListRouter.swift; sourceTree = "<group>"; };
@@ -87,6 +97,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0FC98E0D29DCB7AC005E53EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,6 +112,7 @@
 			children = (
 				0F8645C829C8C96700CE161D /* swiftui-marvel */,
 				0F8645D929C8C96700CE161D /* swiftui-marvelTests */,
+				0FC98E1129DCB7AC005E53EF /* watch-swiftui-marvel Watch App */,
 				0F8645C729C8C96700CE161D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +123,7 @@
 				0F8645C629C8C96700CE161D /* swiftui-marvel.app */,
 				0F8645D629C8C96700CE161D /* swiftui-marvelTests.xctest */,
 				0F8645E029C8C96700CE161D /* swiftui-marvelUITests.xctest */,
+				0FC98E1029DCB7AC005E53EF /* watch-swiftui-marvel Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,6 +230,26 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		0FC98E1129DCB7AC005E53EF /* watch-swiftui-marvel Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				0FC98E1E29DCB8F5005E53EF /* watch-swiftui-marvel-Watch-App-Info.plist */,
+				0FC98E1229DCB7AC005E53EF /* watch_swiftui_marvelApp.swift */,
+				0FC98E1429DCB7AC005E53EF /* ContentView.swift */,
+				0FC98E1629DCB7AD005E53EF /* Assets.xcassets */,
+				0FC98E1829DCB7AD005E53EF /* Preview Content */,
+			);
+			path = "watch-swiftui-marvel Watch App";
+			sourceTree = "<group>";
+		};
+		0FC98E1829DCB7AD005E53EF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0FC98E1929DCB7AD005E53EF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		0FE1964129CA42F800EDDC00 /* CharacterDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +315,23 @@
 			productReference = 0F8645E029C8C96700CE161D /* swiftui-marvelUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0FC98E0F29DCB7AC005E53EF /* watch-swiftui-marvel Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FC98E1D29DCB7AD005E53EF /* Build configuration list for PBXNativeTarget "watch-swiftui-marvel Watch App" */;
+			buildPhases = (
+				0FC98E0C29DCB7AC005E53EF /* Sources */,
+				0FC98E0D29DCB7AC005E53EF /* Frameworks */,
+				0FC98E0E29DCB7AC005E53EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "watch-swiftui-marvel Watch App";
+			productName = "watch-swiftui-marvel Watch App";
+			productReference = 0FC98E1029DCB7AC005E53EF /* watch-swiftui-marvel Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -297,6 +353,9 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 0F8645C529C8C96700CE161D;
 					};
+					0FC98E0F29DCB7AC005E53EF = {
+						CreatedOnToolsVersion = 14.2;
+					};
 				};
 			};
 			buildConfigurationList = 0F8645C129C8C96700CE161D /* Build configuration list for PBXProject "swiftui-marvel" */;
@@ -315,6 +374,7 @@
 				0F8645C529C8C96700CE161D /* swiftui-marvel */,
 				0F8645D529C8C96700CE161D /* swiftui-marvelTests */,
 				0F8645DF29C8C96700CE161D /* swiftui-marvelUITests */,
+				0FC98E0F29DCB7AC005E53EF /* watch-swiftui-marvel Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -340,6 +400,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FC98E0E29DCB7AC005E53EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FC98E1A29DCB7AD005E53EF /* Preview Assets.xcassets in Resources */,
+				0FC98E1729DCB7AD005E53EF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +447,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FC98E0C29DCB7AC005E53EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FC98E1529DCB7AC005E53EF /* ContentView.swift in Sources */,
+				0FC98E1329DCB7AC005E53EF /* watch_swiftui_marvelApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +721,68 @@
 			};
 			name = Release;
 		};
+		0FC98E1B29DCB7AD005E53EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"watch-swiftui-marvel Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = M9TT9FLG87;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "watch-swiftui-marvel-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "watch-swiftui-marvel";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ".watchkitapp.watch-swiftui-marvel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		0FC98E1C29DCB7AD005E53EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"watch-swiftui-marvel Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = M9TT9FLG87;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "watch-swiftui-marvel-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "watch-swiftui-marvel";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ".watchkitapp.watch-swiftui-marvel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -678,6 +818,15 @@
 			buildConfigurations = (
 				0F8645F129C8C96700CE161D /* Debug */,
 				0F8645F229C8C96700CE161D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FC98E1D29DCB7AD005E53EF /* Build configuration list for PBXNativeTarget "watch-swiftui-marvel Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FC98E1B29DCB7AD005E53EF /* Debug */,
+				0FC98E1C29DCB7AD005E53EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
