@@ -7,16 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F8645CA29C8C96700CE161D /* swiftui_marvelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645C929C8C96700CE161D /* swiftui_marvelApp.swift */; };
-		0F8645CE29C8C96700CE161D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8645CD29C8C96700CE161D /* Assets.xcassets */; };
-		0F8645D129C8C96700CE161D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8645D029C8C96700CE161D /* Preview Assets.xcassets */; };
-		0F8645F529C8D6C200CE161D /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645F429C8D6C200CE161D /* JSONParser.swift */; };
-		0F8645F729C8D70500CE161D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645F629C8D70500CE161D /* APIError.swift */; };
-		0F8645F929C8D76E00CE161D /* FetchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645F829C8D76E00CE161D /* FetchAPI.swift */; };
-		0F8645FD29C8D81400CE161D /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8645FC29C8D81400CE161D /* CharacterListView.swift */; };
-		0F86460129C8DAE100CE161D /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F86460029C8DAE100CE161D /* CharacterListViewModel.swift */; };
-		0F86460329C8DCDB00CE161D /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F86460229C8DCDB00CE161D /* CharacterModel.swift */; };
-		0F86460529C9D10100CE161D /* CharactersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F86460429C9D10100CE161D /* CharactersAPI.swift */; };
 		0FBAED8F29D5159200040E65 /* CharacterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBAED8E29D5159200040E65 /* CharacterListViewModelTests.swift */; };
 		0FBAED9329D5167D00040E65 /* CharacterAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBAED9229D5167D00040E65 /* CharacterAPIMock.swift */; };
 		0FBAEF8429D5247000040E65 /* CharacterModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBAEF8329D5247000040E65 /* CharacterModelMock.swift */; };
@@ -25,33 +15,11 @@
 		0FC98E1729DCB7AD005E53EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC98E1629DCB7AD005E53EF /* Assets.xcassets */; };
 		0FC98E1A29DCB7AD005E53EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC98E1929DCB7AD005E53EF /* Preview Assets.xcassets */; };
 		0FC98E1F29DCB9EA005E53EF /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F86460229C8DCDB00CE161D /* CharacterModel.swift */; };
-		0FE1964329CA432600EDDC00 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE1964229CA432600EDDC00 /* CharacterDetailView.swift */; };
-		0FE1964529CA434500EDDC00 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE1964429CA434500EDDC00 /* CharacterDetailViewModel.swift */; };
-		0FE1964729CA44A800EDDC00 /* CharacterListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE1964629CA44A800EDDC00 /* CharacterListRouter.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		0F8645D729C8C96700CE161D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F8645BE29C8C96700CE161D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0F8645C529C8C96700CE161D;
-			remoteInfo = "swiftui-marvel";
-		};
-		0F8645E129C8C96700CE161D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F8645BE29C8C96700CE161D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0F8645C529C8C96700CE161D;
-			remoteInfo = "swiftui-marvel";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		0F8645C629C8C96700CE161D /* swiftui-marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-marvel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8645C929C8C96700CE161D /* swiftui_marvelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_marvelApp.swift; sourceTree = "<group>"; };
 		0F8645CD29C8C96700CE161D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0F8645D029C8C96700CE161D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0F8645D629C8C96700CE161D /* swiftui-marvelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-marvelTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8645E029C8C96700CE161D /* swiftui-marvelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-marvelUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8645F429C8D6C200CE161D /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
@@ -77,13 +45,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0F8645C329C8C96700CE161D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0F8645D329C8C96700CE161D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -112,8 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				0F8645C829C8C96700CE161D /* swiftui-marvel */,
-				0F8645D929C8C96700CE161D /* swiftui-marvelTests */,
-				0FC98E1129DCB7AC005E53EF /* watch-swiftui-marvel Watch App */,
+				0FC98E1129DCB7AC005E53EF /* WatchApp */,
 				0F8645C729C8C96700CE161D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,7 +81,6 @@
 		0F8645C729C8C96700CE161D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0F8645C629C8C96700CE161D /* swiftui-marvel.app */,
 				0F8645D629C8C96700CE161D /* swiftui-marvelTests.xctest */,
 				0F8645E029C8C96700CE161D /* swiftui-marvelUITests.xctest */,
 				0FC98E1029DCB7AC005E53EF /* watch-swiftui-marvel Watch App.app */,
@@ -137,26 +96,18 @@
 				0F8645F329C8D6AB00CE161D /* APIManager */,
 				0F8645C929C8C96700CE161D /* swiftui_marvelApp.swift */,
 				0F8645CD29C8C96700CE161D /* Assets.xcassets */,
-				0F8645CF29C8C96700CE161D /* Preview Content */,
+				0F8645D929C8C96700CE161D /* Tests */,
 			);
 			path = "swiftui-marvel";
 			sourceTree = "<group>";
 		};
-		0F8645CF29C8C96700CE161D /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				0F8645D029C8C96700CE161D /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		0F8645D929C8C96700CE161D /* swiftui-marvelTests */ = {
+		0F8645D929C8C96700CE161D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				0FBAED9029D5162400040E65 /* Mocks */,
 				0FBAED8C29D5156B00040E65 /* Presentation */,
 			);
-			path = "swiftui-marvelTests";
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		0F8645F329C8D6AB00CE161D /* APIManager */ = {
@@ -231,7 +182,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		0FC98E1129DCB7AC005E53EF /* watch-swiftui-marvel Watch App */ = {
+		0FC98E1129DCB7AC005E53EF /* WatchApp */ = {
 			isa = PBXGroup;
 			children = (
 				0FC98E1E29DCB8F5005E53EF /* watch-swiftui-marvel-Watch-App-Info.plist */,
@@ -240,7 +191,7 @@
 				0FC98E1629DCB7AD005E53EF /* Assets.xcassets */,
 				0FC98E1829DCB7AD005E53EF /* Preview Content */,
 			);
-			path = "watch-swiftui-marvel Watch App";
+			path = WatchApp;
 			sourceTree = "<group>";
 		};
 		0FC98E1829DCB7AD005E53EF /* Preview Content */ = {
@@ -263,23 +214,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0F8645C529C8C96700CE161D /* swiftui-marvel */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0F8645EA29C8C96700CE161D /* Build configuration list for PBXNativeTarget "swiftui-marvel" */;
-			buildPhases = (
-				0F8645C229C8C96700CE161D /* Sources */,
-				0F8645C329C8C96700CE161D /* Frameworks */,
-				0F8645C429C8C96700CE161D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "swiftui-marvel";
-			productName = "swiftui-marvel";
-			productReference = 0F8645C629C8C96700CE161D /* swiftui-marvel.app */;
-			productType = "com.apple.product-type.application";
-		};
 		0F8645D529C8C96700CE161D /* swiftui-marvelTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F8645ED29C8C96700CE161D /* Build configuration list for PBXNativeTarget "swiftui-marvelTests" */;
@@ -291,7 +225,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				0F8645D829C8C96700CE161D /* PBXTargetDependency */,
 			);
 			name = "swiftui-marvelTests";
 			productName = "swiftui-marvelTests";
@@ -309,7 +242,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				0F8645E229C8C96700CE161D /* PBXTargetDependency */,
 			);
 			name = "swiftui-marvelUITests";
 			productName = "swiftui-marvelUITests";
@@ -343,9 +275,6 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					0F8645C529C8C96700CE161D = {
-						CreatedOnToolsVersion = 14.2;
-					};
 					0F8645D529C8C96700CE161D = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 0F8645C529C8C96700CE161D;
@@ -372,7 +301,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0F8645C529C8C96700CE161D /* swiftui-marvel */,
 				0F8645D529C8C96700CE161D /* swiftui-marvelTests */,
 				0F8645DF29C8C96700CE161D /* swiftui-marvelUITests */,
 				0FC98E0F29DCB7AC005E53EF /* watch-swiftui-marvel Watch App */,
@@ -381,15 +309,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0F8645C429C8C96700CE161D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0F8645D129C8C96700CE161D /* Preview Assets.xcassets in Resources */,
-				0F8645CE29C8C96700CE161D /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0F8645D429C8C96700CE161D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,24 +335,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0F8645C229C8C96700CE161D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FE1964329CA432600EDDC00 /* CharacterDetailView.swift in Sources */,
-				0F86460529C9D10100CE161D /* CharactersAPI.swift in Sources */,
-				0F8645FD29C8D81400CE161D /* CharacterListView.swift in Sources */,
-				0FE1964729CA44A800EDDC00 /* CharacterListRouter.swift in Sources */,
-				0F8645F729C8D70500CE161D /* APIError.swift in Sources */,
-				0F8645CA29C8C96700CE161D /* swiftui_marvelApp.swift in Sources */,
-				0F8645F529C8D6C200CE161D /* JSONParser.swift in Sources */,
-				0F86460129C8DAE100CE161D /* CharacterListViewModel.swift in Sources */,
-				0FE1964529CA434500EDDC00 /* CharacterDetailViewModel.swift in Sources */,
-				0F86460329C8DCDB00CE161D /* CharacterModel.swift in Sources */,
-				0F8645F929C8D76E00CE161D /* FetchAPI.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0F8645D229C8C96700CE161D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,19 +363,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0F8645D829C8C96700CE161D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0F8645C529C8C96700CE161D /* swiftui-marvel */;
-			targetProxy = 0F8645D729C8C96700CE161D /* PBXContainerItemProxy */;
-		};
-		0F8645E229C8C96700CE161D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0F8645C529C8C96700CE161D /* swiftui-marvel */;
-			targetProxy = 0F8645E129C8C96700CE161D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0F8645E829C8C96700CE161D /* Debug */ = {
@@ -591,66 +479,6 @@
 			};
 			name = Release;
 		};
-		0F8645EB29C8C96700CE161D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"swiftui-marvel/Preview Content\"";
-				DEVELOPMENT_TEAM = M9TT9FLG87;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "swiftui-marvel/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Marvel - SwiftUI";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bumorgan.swiftui-marvel";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		0F8645EC29C8C96700CE161D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"swiftui-marvel/Preview Content\"";
-				DEVELOPMENT_TEAM = M9TT9FLG87;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "swiftui-marvel/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Marvel - SwiftUI";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bumorgan.swiftui-marvel";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		0F8645EE29C8C96700CE161D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -730,7 +558,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"watch-swiftui-marvel Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WatchApp/Preview Content\"";
 				DEVELOPMENT_TEAM = M9TT9FLG87;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -761,7 +589,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"watch-swiftui-marvel Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WatchApp/Preview Content\"";
 				DEVELOPMENT_TEAM = M9TT9FLG87;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -793,15 +621,6 @@
 			buildConfigurations = (
 				0F8645E829C8C96700CE161D /* Debug */,
 				0F8645E929C8C96700CE161D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0F8645EA29C8C96700CE161D /* Build configuration list for PBXNativeTarget "swiftui-marvel" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0F8645EB29C8C96700CE161D /* Debug */,
-				0F8645EC29C8C96700CE161D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
